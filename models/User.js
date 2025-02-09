@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
   profession: { type: String, required: true },
   password: { type: String, required: true },
   image: { type: String }, // Store the Cloudinary URL
+  subscription: { type: String, default: "basic" },
 });
 
 const User = mongoose.model('User', userSchema);

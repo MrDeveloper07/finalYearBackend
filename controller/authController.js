@@ -1,7 +1,7 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const cloudinary = require('../config/cloudinary');
-// Import bcrypt for password encryption
+
 
 // User signup
 
@@ -30,6 +30,7 @@ const signup = async (req, res) => {
       profession,
       password, // Hash the password before saving in production
       image,
+      subscription: "basic",
     });
 
     await newUser.save();
